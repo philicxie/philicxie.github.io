@@ -25,32 +25,38 @@
   </head>
   <body>
     <style>
-      body {
-        min-height: 2000px;
-      }
+        body {
+            min-height: 2000px;
+        }
 
-      .navbar-static-top {
-        margin-bottom: 0px;
-      }
+        .navbar-static-top {
+            margin-bottom: 0px;
+        }
 
-      #topBar{
-          height: 200px;
-      }
+        #topBar{
+            height: 200px;
+        }
         #weatherBar{
             border-radius: 10px;
             border: 5px;
             border-style: solid;
         }
-        #weatherBar-date, #weatherBar-city{
+        #weatherBar-city{
             text-align: center;
             margin: 0 auto;
+            height: 50px;
         }
         #weatherBar-temp{
             position: relative;
         }
         #weatherBar-temp .temp{
             position: absolute;
-            top: 70%;
+            top: 90%;
+            left: 20%;
+        }
+        #weatherBar-date {
+            position: absolute;
+            top: 0%;
             left: 20%;
         }
     </style>
@@ -101,16 +107,17 @@
             <br>
             <div id="weatherBar">
                 <div id="weatherBar-up" class="row-fluid">
-                    <div id="weatherBar-date" class="span4">
-                            <h4>1 Oct.</h4>
-                    </div>
+                    <div class="span2"></div>
                     <div id="weatherBar-city" class="span8">
-                        <h4><span class="fui-location"></span>Shanghai</h4>
+                        <h5><span class="fui-location"></span>Shanghai</h5>
                     </div>
                 </div>
                 <div id="weatherBar-down" class="row-fluid">
                     <div class="span5" id="weatherBar-temp">
-                        <h1 class="temp">31</h1>
+                        <div id="weatherBar-date" >
+                            <h4>1 Oct.</h4>
+                        </div>
+                        <h2 class="temp">31°</h2>
                     </div>
                     <div class="span7">
                         <div class="icon rainy">
@@ -119,19 +126,6 @@
                         </div>
                     </div>
                 </div>
-
-
-                <!--<div id="weatherBar-city">-->
-                    <!--<div id="weatherBar-date">-->
-                        <!---->
-                    <!--<h4>Saturday, 1 Oct.<span class="fui-location"></span>Shanghai</h4>-->
-                    <!--</div>-->
-                    <!--<div class="icon rainy">-->
-                        <!--<div class="cloud"></div>-->
-                        <!--<div class="rain"></div>-->
-                    <!--</div>-->
-
-                <!--</div>-->
             </div>
         </div>
     </div>

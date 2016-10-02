@@ -33,6 +33,7 @@ $(document).ready(function(){
                             break;
                     }
                     console.log(weatherHtml);
+                    $("#weatherBar-icon").html(weatherHtml);
                 }
             });
         }

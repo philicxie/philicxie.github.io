@@ -1,3 +1,7 @@
+$(window).load(function(){
+    $('body').addClass('loaded');
+    $('#loader-wrapper .load_title').remove();
+});
 $(document).ready(function(){
     var monArr = ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "July.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
     var date = new Date();

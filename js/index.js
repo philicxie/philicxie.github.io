@@ -21,7 +21,7 @@ $(document).ready(function(){
                     var weatherHtml = "";
                     switch(weather){
                         case "Clear":
-                            weatherHtml = "<div class='icon'><div class=\"sun\"> <div class=\"rays\"></div></div></div>";
+                            weatherHtml = "<div class='icon'><div class=\"sun\"><div class=\"rays\"></div></div></div>";
                             break;
                         case "Clouds":
                             weatherHtml = "<div class='icon'><div class=\"cloud\"></div><div class=\"cloud\"></div><div>";

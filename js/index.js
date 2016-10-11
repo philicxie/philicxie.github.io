@@ -5,7 +5,7 @@ $(window).load(function(){
 $(document).ready(function(){
     var monArr = ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "July.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
     var date = new Date();
-    $("#weatherBar-date").html("<h4>"+date.getDate()+" "+monArr[date.getMonth()*1]+"</h4>");
+    $("#weatherBar-date").html("<h5>"+date.getDate()+" "+monArr[date.getMonth()*1]+"</h5>");
     var geolocation = new BMap.Geolocation();
     geolocation.getCurrentPosition(function(r){
         if(this.getStatus() == BMAP_STATUS_SUCCESS){

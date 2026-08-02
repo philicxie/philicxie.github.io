@@ -2,9 +2,9 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://localhost:4000/</id>
-  <title>Phil Xie</title>
+  <title>谢立伟的博客</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2026-08-02T19:49:04+08:00</updated>
+  <updated>2026-08-02T22:46:31+08:00</updated>
   <author>
     <name></name>
     <uri>http://localhost:4000/</uri>

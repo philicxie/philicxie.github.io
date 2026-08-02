@@ -2,9 +2,9 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://localhost:4000/</id>
-  <title>谢立伟的博客</title>
+  <title>谢立伟</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2026-08-02T22:46:31+08:00</updated>
+  <updated>2026-08-02T23:02:37+08:00</updated>
   <author>
     <name></name>
     <uri>http://localhost:4000/</uri>
@@ -29,7 +29,7 @@
     <id>http://localhost:4000/posts/Cuda%E5%88%9D%E7%AA%A5-%E6%95%B0%E7%BB%84%E6%B1%82%E5%92%8C/</id>
     <content type="text/html" src="http://localhost:4000/posts/Cuda%E5%88%9D%E7%AA%A5-%E6%95%B0%E7%BB%84%E6%B1%82%E5%92%8C/" />
     <author>
-      <name>xie</name>
+      <name></name>
     </author>
 
   
@@ -38,7 +38,7 @@
     
   
 
-  <summary>写在最前  敲下标题的时候，我入门CUDA刚刚一周有余，而在这之前，距离我正式从C语言开始学习编程，已经过去了将近13年, 那个时候我肯定一定也写过一段程序来解决数组求和，大概长这个样子:  int arr[] = {10, 20, 30, 40, 50}; int sum = 0; int length = sizeof(arr) / sizeof(arr[0]);  for (int i = 0; i &amp;lt; length; i++) { 	sum += arr[i]; }   讲真这是一个简单到甚至谈不上需要谈及要去“解决”的小问题，直到接触CUDA，我才重新意识到，这个问题远比想象中更有趣，此便是我写下本文的发心所在。  数组求和的第一个有趣之处在于，它其实并不是直觉上CUDA善于处理的那类问题，而下面这个例子是我们更喜欢的并行计算的模样： // 将数组arr的每一位元素+...</summary>
+  <summary>写在最前  敲下标题的时候，我入门CUDA刚刚一周有余，而在这之前，距离我正式从C语言开始学习编程，已经过去了将近13年, 那个时候我肯定一定也写过一段程序来解决数组求和，大概长这个样子:  int arr[] = {10, 20, 30, 40, 50}; int sum = 0; int length = sizeof(arr) / sizeof(arr[0]);  for (int i = 0; i &amp;lt; length; i++) {     sum += arr[i]; }   讲真这是一个简单到甚至谈不上需要谈及要去“解决”的小问题，直到接触CUDA，我才重新意识到，这个问题远比想象中更有趣，此便是我写下本文的发心所在。  数组求和的第一个有趣之处在于，它其实并不是直觉上CUDA善于处理的那类问题，而下面这个例子是我们更喜欢的并行计算的模样： // 将数组arr的每一位...</summary>
 
   </entry>
 

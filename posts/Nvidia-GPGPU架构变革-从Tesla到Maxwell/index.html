@@ -27,22 +27,24 @@
 
   <!-- Begin Jekyll SEO tag v2.9.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Phil Xie" />
+<meta property="og:title" content="Nvidia GPGPU架构变革：从Tesla到Maxwell" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
-<meta name="twitter:description" property="og:description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
+<meta name="description" content="GPGPU的来时路" />
+<meta name="twitter:description" property="og:description" content="GPGPU的来时路" />
+<link rel="canonical" href="http://localhost:4000/posts/Nvidia-GPGPU%E6%9E%B6%E6%9E%84%E5%8F%98%E9%9D%A9-%E4%BB%8ETesla%E5%88%B0Maxwell/" />
+<meta property="og:url" content="http://localhost:4000/posts/Nvidia-GPGPU%E6%9E%B6%E6%9E%84%E5%8F%98%E9%9D%A9-%E4%BB%8ETesla%E5%88%B0Maxwell/" />
 <meta property="og:site_name" content="Phil Xie" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-26T12:00:00+08:00" />
+<meta property="article:modified_time" content="2026-07-26T12:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Phil Xie" />
+<meta name="twitter:title" content="Nvidia GPGPU架构变革：从Tesla到Maxwell" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"Phil Xie","name":"Phil Xie","url":"http://localhost:4000/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-07-26T12:00:00+08:00","datePublished":"2026-07-26T12:00:00+08:00","description":"GPGPU的来时路","headline":"Nvidia GPGPU架构变革：从Tesla到Maxwell","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Nvidia-GPGPU%E6%9E%B6%E6%9E%84%E5%8F%98%E9%9D%A9-%E4%BB%8ETesla%E5%88%B0Maxwell/"},"url":"http://localhost:4000/posts/Nvidia-GPGPU%E6%9E%B6%E6%9E%84%E5%8F%98%E9%9D%A9-%E4%BB%8ETesla%E5%88%B0Maxwell/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Phil Xie</title>
+  <title>Nvidia GPGPU架构变革：从Tesla到Maxwell | Phil Xie</title>
 
   <!--
   The Favicons for Web, Android, Microsoft, and iOS (iPhone and iPad) Apps
@@ -100,11 +102,16 @@
   <!-- 3rd-party Dependencies -->
 
   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.css">
+  
 
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2/dist/loading-attribute-polyfill.min.css">
   
 
+  
+    <!-- Image Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3/dist/css/glightbox.min.css">
   
 
   <!-- Scripts -->
@@ -123,6 +130,9 @@
   
 
   
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
 
 
 
@@ -180,9 +190,30 @@
 
   
 
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
 
 
-  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2/dist/loading-attribute-polyfill.umd.min.js,npm/dayjs@1/dayjs.min.js,npm/dayjs@1/locale/en.js,npm/dayjs@1/plugin/relativeTime.js,npm/dayjs@1/plugin/localizedFormat.js"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3/dist/js/glightbox.min.js,npm/clipboard@2/dist/clipboard.min.js,npm/dayjs@1/dayjs.min.js,npm/dayjs@1/locale/en.js,npm/dayjs@1/plugin/relativeTime.js,npm/dayjs@1/plugin/localizedFormat.js,npm/tocbot@4/dist/tocbot.min.js"></script>
 
 
 
@@ -190,11 +221,15 @@
 
 
 
-<script defer src="/assets/js/dist/home.min.js"></script>
+<script defer src="/assets/js/dist/post.min.js"></script>
 
 
 
 <!-- Pageviews -->
+
+  
+
+  
 
 
 
@@ -219,7 +254,7 @@
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
       <!-- home -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a href="/" class="nav-link">
           <i class="fa-fw fas fa-home"></i>
           <span>HOME</span>
@@ -292,9 +327,23 @@
       
 
       
-        <!-- index page -->
-        <span>Home</span>
+        
+          
+            <span>
+              <a href="/">Home</a>
+            </span>
 
+          
+        
+          
+        
+          
+            
+              <span>Nvidia GPGPU架构变革：从Tesla到Maxwell</span>
+            
+
+          
+        
       
     </nav>
     <!-- endof #breadcrumb -->
@@ -304,7 +353,7 @@
     </button>
 
     <div id="topbar-title">
-      Phil Xie
+      Post
     </div>
 
     <button type="button" id="search-trigger" class="btn btn-link" aria-label="Search">
@@ -373,6 +422,27 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -402,40 +472,174 @@
 
 
 
-<!-- Get pinned posts on current page -->
 
+<article class="px-1" data-toc="true">
+  <header>
+    <h1 data-toc-skip>Nvidia GPGPU架构变革：从Tesla到Maxwell</h1>
+    
 
+  </header>
 
-
-
-
-<!-- Get normal posts on current page -->
-
-
-
-
-
-<div id="post-list" class="flex-grow-1 px-xl-1">
   
-    <article class="card-wrapper card">
-      <a href="/posts/Cuda%E5%88%9D%E7%AA%A5-%E6%95%B0%E7%BB%84%E6%B1%82%E5%92%8C/" class="post-preview row g-0 flex-md-row-reverse">
+    <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
+      <span class="label text-truncate">Nvidia GPGPU架构变革：从Tesla到Maxwell</span>
+      <button type="button" class="toc-trigger btn me-1">
+        <i class="fa-solid fa-list-ul fa-fw"></i>
+      </button>
+    </div>
+
+    <button id="toc-solo-trigger" type="button" class="toc-trigger btn btn-outline-secondary btn-sm">
+      <span class="label ps-2 pe-1">Contents</span>
+      <i class="fa-solid fa-angle-right fa-fw"></i>
+    </button>
+
+    <dialog id="toc-popup" class="p-0">
+      <div class="header d-flex flex-row align-items-center justify-content-between">
+        <div class="label text-truncate py-2 ms-4">Nvidia GPGPU架构变革：从Tesla到Maxwell</div>
+        <button id="toc-popup-close" type="button" class="btn-close btn-sm mx-3" aria-label="Close"></button>
+      </div>
+      <div id="toc-popup-content" class="px-4 py-3 pb-4"></div>
+    </dialog>
+  
+
+  <div class="content">
+    <h2 id="gpgpu的来时路"><span class="me-2">GPGPU的来时路</span><a href="#gpgpu的来时路" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>2003年，来自Nvidia的Mark J. Harris提出GPGPU时，指的是在图形计算卡上进行通用计算（General-Purpose Computing on Graphics Processing Unit）。如果翻看当时的业界讨论与实践，这个概念并非是前瞻理论而更像是一种总结，甚至带有一些无奈的妥协。如果要讲清楚来龙去脉，需要先从图形学的基础—-<strong>光栅化管线</strong>开始说起。</p>
+
+  </div>
+
+  <div class="post-tail-wrapper text-muted">
+    <div class="d-flex justify-content-between align-items-center gap-3 mb-3">
+
+      <!-- "Edit this post" link -->
+      <!-- Link to edit the post to contribute. -->
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <!-- tags -->
+    
+      <div class="post-tags">
+        <i class="fa fa-tags fa-fw me-1"></i>
         
-
+          <a
+            href="/tags/cudalearn/"
+            class="post-tag no-text-decoration"
+          >CudaLearn</a>
         
+      </div>
+    
 
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">Cuda初窥：数组求和</h1>
+    <div
+      class="
+        post-tail-bottom
+        d-flex justify-content-between align-items-center mt-5 pb-2
+      "
+    >
+    </div>
+    <!-- .post-tail-bottom -->
+  </div>
+  <!-- div.post-tail-wrapper -->
+</article>
 
-            <div class="card-text content mt-0 mb-3">
-              <p>写在最前  敲下标题的时候，我入门CUDA刚刚一周有余，而在这之前，距离我正式从C语言开始学习编程，已经过去了将近13年, 那个时候我肯定一定也写过一段程序来解决数组求和，大概长这个样子:  int arr[] = {10, 20, 30, 40, 50}; int sum = 0; int length = sizeof(arr) / sizeof(arr[0]);  for (int i...</p>
-            </div>
 
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
+            
+          </main>
+
+          <!-- panel -->
+          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
+
+            
+              
+              
+
+
+
+
+
+
+  <div class="toc-border-cover z-3"></div>
+  <section id="toc-wrapper" class="invisible position-sticky ps-0 pe-4 pb-4">
+    <h2 class="panel-heading ps-3 pb-2 mb-0">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
+
+            
+          </aside>
+        </div>
+
+        <div class="row">
+          <!-- tail -->
+          <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              
+              <!-- Recommend the other 3 posts according to the tags and categories of the current post. -->
+
+<!-- The total size of related posts -->
+
+
+<!-- An random integer that bigger than 0 -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">Further Reading</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/Cuda%E5%88%9D%E7%AA%A5-%E6%95%B0%E7%BB%84%E6%B1%82%E5%92%8C/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
   Date format snippet
   See: ${JS_ROOT}/modules/components/locale-datetime.js
 -->
@@ -452,100 +656,22 @@
   Jul 29, 2026
 </time>
 
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      CudaLearn
-                  </span>
-                
+              <h4 class="pt-0 my-2">Cuda初窥：数组求和</h4>
+              <div class="text-muted">
+                <p>写在最前  敲下标题的时候，我入门CUDA刚刚一周有余，而在这之前，距离我正式从C语言开始学习编程，已经过去了将近13年, 那个时候我肯定一定也写过一段程序来解决数组求和，大概长这个样子:  1 2 3 4 5 6 7 int arr[] = {10, 20, 30, 40, 50}; int sum = 0; int length = sizeof(arr) / sizeof(arr[0]...</p>
               </div>
-
-              
             </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/Nvidia-GPGPU%E6%9E%B6%E6%9E%84%E5%8F%98%E9%9D%A9-%E4%BB%8ETesla%E5%88%B0Maxwell/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">Nvidia GPGPU架构变革：从Tesla到Maxwell</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>GPGPU的来时路  2003年，来自Nvidia的Mark J. Harris提出GPGPU时，指的是在图形计算卡上进行通用计算（General-Purpose Computing on Graphics Processing Unit）。如果翻看当时的业界讨论与实践，这个概念并非是前瞻理论而更像是一种总结，甚至带有一些无奈的妥协。如果要讲清楚来龙去脉，需要先从图形学的基础—-光栅化管线开...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/modules/components/locale-datetime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1785038400"
-  data-df="ll"
-  
->
-  Jul 26, 2026
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      CudaLearn
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-</div>
-<!-- #post-list -->
-
-
+          </a>
+        </article>
+      
+    </nav>
+  </aside>
+  <!-- #related-posts -->
 
 
             
-          </main>
-
-          <!-- panel -->
-          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
-
-            
-          </aside>
-        </div>
-
-        <div class="row">
-          <!-- tail -->
-          <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+              
+              
             
 
             
@@ -640,6 +766,11 @@
     
 
     <!-- Embedded scripts -->
+
+    
+      
+      <!-- The comments switcher -->
+
 
     
 
